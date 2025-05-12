@@ -1,0 +1,237 @@
+/* Base Styles */
+.calendar-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.calendar-title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.connect-button {
+  display: block;
+  margin: 20px auto;
+  padding: 12px 20px;
+  background-color: #4285F4;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.connect-button:hover {
+  background-color: #3367d6;
+}
+
+/* Calendar Styles */
+.calendar-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 8px;
+  margin: 20px 0;
+}
+
+.month-header {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0 15px;
+}
+
+.calendar-table button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #4285F4;
+  padding: 5px 10px;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.calendar-table button:hover {
+  background-color: #f0f7ff;
+}
+
+.calendar-table th {
+  color: #666;
+  font-weight: 500;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.date-cell {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  font-weight: 500;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.date-cell.selected {
+  background-color: #4285F4;
+  color: white;
+  font-weight: 600;
+}
+
+.date-cell.disabled {
+  color: #ccc;
+  background-color: #f9f9f9;
+  cursor: not-allowed;
+}
+
+.date-cell:not(.disabled):hover {
+  background-color: #f0f7ff;
+}
+
+.empty-cell {
+  visibility: hidden;
+}
+
+/* Time Slots */
+.time-selection {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  gap: 12px;
+  margin: 25px 0;
+}
+
+.time-button {
+  padding: 10px;
+  background-color: #f0f7ff;
+  border: 1px solid #d6e4ff;
+  border-radius: 8px;
+  color: #4285F4;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+.time-button:hover {
+  background-color: #d6e4ff;
+  transform: translateY(-2px);
+}
+
+.loading-message,
+.no-slots-message {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  grid-column: 1 / -1;
+}
+
+/* Form Styles */
+.appointment-form {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 25px;
+  margin-top: 20px;
+}
+
+.appointment-form h2 {
+  margin-top: 0;
+}
+
+.appointment-form input,
+.appointment-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.appointment-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.schedule-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.schedule-button:hover {
+  background-color: #3e8e41;
+}
+
+/* Navigation */
+.back-button {
+  background: none;
+  border: none;
+  color: #4285F4;
+  cursor: pointer;
+  margin-bottom: 15px;
+  padding: 5px;
+  font-size: 0.9rem;
+}
+
+.back-button:hover {
+  text-decoration: underline;
+}
+
+/* Confirmation */
+.confirmation-message {
+  border: 1px solid #4CAF50;
+  border-radius: 8px;
+  padding: 25px;
+  text-align: center;
+  background-color: #f8fff8;
+}
+
+.confirmation-title {
+  color: #4CAF50;
+  margin-top: 0;
+}
+
+.new-appointment-button {
+  padding: 12px 20px;
+  background-color: #4285F4;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.new-appointment-button:hover {
+  background-color: #3367d6;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .calendar-table {
+    border-spacing: 5px;
+  }
+  
+  .date-cell {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
+  
+  .time-selection {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  }
+}
